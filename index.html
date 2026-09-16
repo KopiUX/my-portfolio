@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kent Joshua Mamon — UI/UX Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a href="#home" class="logo"><span class="mark">KM</span><span class="word">Kent Mamon</span></a>
+    <nav class="links" id="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="navcta">
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero wrap">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>Computer science student, University of San Agustin</div>
+      <h1 class="name">Kent Joshua<br>Mamon</h1>
+      <p class="role">UI/UX design, one clean interface at a time</p>
+      <p class="bio">I design clean, intuitive interfaces that make applications easier and more enjoyable to use — exploring layout, visual hierarchy, and how people actually move through a screen.</p>
+      <div class="hero-actions">
+        <a href="#project" class="btn-solid">View my work</a>
+        <a href="#contact" class="btn-outline">Get in touch</a>
+      </div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/joshua.mamon.3" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+        </a>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+        <a href="https://github.com/KopiUX" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="avatar-frame">
+      <div class="grid-overlay"></div>
+      <div class="rings">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="86" stroke="#33D6B8" stroke-opacity="0.5" stroke-width="1"/>
+          <circle cx="100" cy="100" r="64" stroke="#E8B94D" stroke-opacity="0.5" stroke-width="1"/>
+          <circle cx="100" cy="100" r="42" stroke="#F3EFE6" stroke-opacity="0.35" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="initials">KM</div>
+      <span class="spec-tag top">photo — 4:5</span>
+      <span class="spec-tag bottom">replace me</span>
+    </div>
+  </section>
+
+  <div class="certs">
+    <div class="wrap">
+      <div class="certs-head">
+        <h2>Certifications</h2>
+        <span>3 earned in 2026</span>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-thumb"><img src="sql-cert.jpg" alt="SQL Associate certificate"></div>
+          <span class="num">01</span>
+          <h3>SQL Associate</h3>
+          <p>DataCamp</p>
+          <span class="date">Certified Sept 12, 2026</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-thumb"><img src="python1-cert.jpg" alt="Python Essentials 1 certificate"></div>
+          <span class="num">02</span>
+          <h3>Python Essentials 1</h3>
+          <p>Cisco Networking Academy · Python Institute</p>
+          <span class="date">Completed Aug 1, 2026</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-thumb"><img src="python2-cert.jpg" alt="Python Essentials 2 certificate"></div>
+          <span class="num">03</span>
+          <h3>Python Essentials 2</h3>
+          <p>Cisco Networking Academy · Python Institute</p>
+          <span class="date">Completed Aug 7, 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="section-head">
+          <div class="eyebrow"><span class="dot"></span>About</div>
+          <h2>About me</h2>
+        </div>
+        <p>I'm a computer science student at the University of San Agustin with a growing passion for UI/UX design and creating meaningful digital experiences. I'm interested in designing clean, intuitive, and user-friendly interfaces that make applications easier and more enjoyable to use.</p>
+        <p>I enjoy exploring design concepts, organizing layouts, selecting visual elements, and understanding how users interact with technology — treating every screen as a small problem to solve rather than just a surface to decorate.</p>
+      </div>
+      <div class="exploring-box">
+        <h3>Currently building on</h3>
+        <div class="chips">
+          <span class="chip">SQL</span>
+          <span class="chip">Python</span>
+          <span class="chip">UI/UX fundamentals</span>
+          <span class="chip">Layout & hierarchy</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Front-end basics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span>Project</div>
+        <h2>Selected work</h2>
+        <p>A mix of interface explorations and course projects. Filter by type.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All work</button>
+        <button class="filter-btn" data-filter="ui">UI design</button>
+        <button class="filter-btn" data-filter="case">Case study</button>
+        <button class="filter-btn" data-filter="concept">Concept</button>
+      </div>
+
+      <div class="proj-grid" id="proj-grid">
+        <div class="proj-card" data-cat="ui">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1E2228,#0E1013);"><span class="ph">placeholder</span></div>
+          <div class="proj-body">
+            <span class="proj-tag">UI design</span>
+            <h3>Project title one</h3>
+            <p>One-line description of the problem and what the interface solves.</p>
+          </div>
+        </div>
+        <div class="proj-card" data-cat="case">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1E2228,#0E1013);"><span class="ph">placeholder</span></div>
+          <div class="proj-body">
+            <span class="proj-tag">Case study</span>
+            <h3>Project title two</h3>
+            <p>One-line description of the research and design process.</p>
+          </div>
+        </div>
+        <div class="proj-card" data-cat="concept">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1E2228,#0E1013);"><span class="ph">placeholder</span></div>
+          <div class="proj-body">
+            <span class="proj-tag">Concept</span>
+            <h3>Project title three</h3>
+            <p>One-line description of the concept and the idea behind it.</p>
+          </div>
+        </div>
+      </div>
+      <p class="replace-note">Swap these three cards for your real projects, screenshots, and links.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span>Contact</div>
+        <h2>Let's work together</h2>
+        <p>Open to internships, collaborations, and anything UI/UX related. Reach out through any of these.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-list">
+          <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener">
+            <span><span class="label">Email</span><span class="sub">opens Gmail inbox</span></span>
+            <span class="arrow">↗</span>
+          </a>
+          <a href="https://www.facebook.com/joshua.mamon.3" target="_blank" rel="noopener">
+            <span><span class="label">Facebook</span><span class="sub">joshua.mamon.3</span></span>
+            <span class="arrow">↗</span>
+          </a>
+          <a href="https://github.com/KopiUX" target="_blank" rel="noopener">
+            <span><span class="label">GitHub</span><span class="sub">KopiUX</span></span>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Your email</label>
+            <input type="email" id="cf-email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message</button>
+          <p class="form-note">Opens your email app with the message pre-filled.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Kent Joshua Mamon — 2026</p>
+  <p>Built with intent, not templates.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
