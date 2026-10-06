@@ -31,15 +31,3 @@ filterBtns.forEach(btn => {
     });
   });
 });
-
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('cf-name').value;
-  const email = document.getElementById('cf-email').value;
-  const message = document.getElementById('cf-message').value;
-  const target = 'your.email@gmail.com';
-  const subject = encodeURIComponent('Portfolio contact from ' + name);
-  const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-  window.location.href = `mailto:${target}?subject=${subject}&body=${body}`;
-});
