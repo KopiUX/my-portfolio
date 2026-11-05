@@ -130,3 +130,10 @@ h2.g{position:relative}
 
 /* Stop the browser from dragging the photo as a ghost image */
 .lan img{pointer-events:none;-webkit-user-drag:none;user-select:none}
+
+/* ID card: strap is pinned at the top and stretches, only the card moves */
+.lan{position:relative;padding-top:30px;cursor:default;touch-action:auto}
+.lan:active{cursor:default}
+.lan .strap{position:absolute;left:50%;top:-120px;margin:0 0 0 -7px;width:14px;height:150px;transform-origin:50% 0}
+.lan .id{position:relative;transform-origin:50% 0;cursor:grab;touch-action:none}
+.lan .id:active{cursor:grabbing}

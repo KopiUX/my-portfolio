@@ -34,26 +34,35 @@ document.querySelectorAll('.cert').forEach(c=>{
 modal.addEventListener('click',closeModal);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 
-// Draggable ID card (springs back when released)
+// Draggable ID card: the strap stays pinned at the top and stretches
 const lan=document.getElementById('lan');
 if(lan){
+  const card=lan.querySelector('.id'),strap=lan.querySelector('.strap');
   const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const REST=150; // strap length at rest, in px
   let x=0,y=0,vx=0,vy=0,drag=false,ox=0,oy=0,t=0;
   const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-  lan.addEventListener('dragstart',e=>e.preventDefault());
-  lan.addEventListener('pointerdown',e=>{drag=true;ox=e.clientX-x;oy=e.clientY-y;lan.setPointerCapture(e.pointerId)});
-  lan.addEventListener('pointermove',e=>{
+  card.addEventListener('dragstart',e=>e.preventDefault());
+  card.addEventListener('pointerdown',e=>{drag=true;ox=e.clientX-x;oy=e.clientY-y;card.setPointerCapture(e.pointerId)});
+  card.addEventListener('pointermove',e=>{
     if(!drag)return;
-    const nx=clamp(e.clientX-ox,-180,180),ny=clamp(e.clientY-oy,-30,140);
+    const nx=clamp(e.clientX-ox,-200,200),ny=clamp(e.clientY-oy,-20,200);
     vx=nx-x;vy=ny-y;x=nx;y=ny;
   });
   const up=()=>{drag=false};
-  lan.addEventListener('pointerup',up);lan.addEventListener('pointercancel',up);
+  card.addEventListener('pointerup',up);card.addEventListener('pointercancel',up);
   (function tick(){
     t+=0.016;
     if(!drag){vx+=-x*0.05;vy+=-y*0.05;vx*=0.92;vy*=0.92;x+=vx;y+=vy}
-    const sway=calm?0:Math.sin(t*1.3)*1.5;
-    lan.style.transform=`translate(${x}px,${y}px) rotate(${x*0.1+sway}deg)`;
+    const len=Math.hypot(x,REST+y);
+    const ang=-Math.atan2(x,REST+y)*180/Math.PI;
+    const w=Math.max(6,14*Math.sqrt(REST/len)); // thinner when stretched
+    strap.style.height=len+'px';
+    strap.style.width=w+'px';
+    strap.style.marginLeft=(-w/2)+'px';
+    strap.style.transform=`rotate(${ang}deg)`;
+    const sway=calm?0:Math.sin(t*1.3)*1.2;
+    card.style.transform=`translate(${x}px,${y}px) rotate(${ang*0.8+sway}deg)`;
     requestAnimationFrame(tick);
   })();
 }
