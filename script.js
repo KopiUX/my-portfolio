@@ -84,3 +84,15 @@ document.querySelectorAll('section').forEach(s=>io.observe(s));
     if(i++<text.length)setTimeout(step,80);
   })();
 })();
+
+// CV viewer
+(function(){
+  const btn=document.getElementById('cvbtn'),box=document.getElementById('cvmodal'),fr=document.getElementById('cvframe'),x=document.getElementById('cvclose');
+  if(!btn||!box)return;
+  const open=()=>{if(!fr.getAttribute('src'))fr.setAttribute('src',fr.dataset.src);box.hidden=false;document.body.style.overflow='hidden'};
+  const close=()=>{box.hidden=true;document.body.style.overflow=''};
+  btn.addEventListener('click',open);
+  x.addEventListener('click',close);
+  box.addEventListener('click',e=>{if(e.target===box)close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)close()});
+})();

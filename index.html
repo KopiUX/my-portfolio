@@ -32,7 +32,7 @@
       <h2 class="g" data-text="Osh">Osh</h2>
       <p>BS Computer Science student at the University of San Agustin in Iloilo, Philippines. I work in a research group where I manage our game development project, and I also build mobile and network tools for class and thesis work.</p>
       <div class="quote">"Turning ideas into clean, useful software."</div><br>
-      <a class="btn main" href="#" onclick="return false">Download CV</a> <a class="btn" href="#portfolio">View projects</a>
+      <button class="btn main" id="cvbtn" type="button">View CV</button> <a class="btn" href="#portfolio">View projects</a>
     </div>
     <div class="avatar"><img src="me.jpg" alt="Osh" onerror="this.remove()">O</div>
     <div class="stats"><div class="card"><b>3</b><span>Projects</span></div><div class="card"><b>7</b><span>Certificates</span></div><div class="card"><b>2</b><span>Research works</span></div></div>
@@ -74,6 +74,15 @@
     <a class="lcard" href="https://github.com/KopiUX" target="_blank" rel="noopener"><span class="ln">GitHub</span><span class="ls">@KopiUX</span><span class="ar">&#8599;</span></a>
   </div>
 </section>
+<div class="modal cvmodal" id="cvmodal" hidden>
+  <div class="cvbox" role="dialog" aria-label="My CV">
+    <div class="cvbar">
+      <span class="mono">Cv.pdf</span>
+      <span class="cvact"><a class="cvlink" href="Cv.pdf" target="_blank" rel="noopener">Open in new tab</a> <a class="btn main" href="Cv.pdf" download>Download</a> <button class="btn" id="cvclose" type="button">Close</button></span>
+    </div>
+    <iframe id="cvframe" data-src="Cv.pdf" title="My CV"></iframe>
+  </div>
+</div>
 <div class="modal" id="modal" hidden><img id="mimg" alt=""><p id="mtxt" hidden></p></div>
 <footer>&copy; 2026 Osh. All rights reserved.</footer>
 

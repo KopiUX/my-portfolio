@@ -137,3 +137,12 @@ h2.g{position:relative}
 .lan .strap{position:absolute;left:50%;top:-120px;margin:0 0 0 -7px;width:14px;height:150px;transform-origin:50% 0}
 .lan .id{position:relative;transform-origin:50% 0;cursor:grab;touch-action:none}
 .lan .id:active{cursor:grabbing}
+
+/* CV viewer */
+.cvmodal{cursor:default}
+.cvbox{width:min(900px,100%);height:88vh;background:var(--card);border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;overflow:hidden}
+.cvbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--line)}
+.cvact{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cvlink{font-size:13px;color:var(--mute);text-decoration:underline}
+.cvlink:hover{color:var(--text)}
+.cvbox iframe{flex:1;width:100%;border:0;background:#fff}
